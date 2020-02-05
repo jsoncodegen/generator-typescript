@@ -1,0 +1,5 @@
+export const ASSERT_FOLDER_NAME = '__assert__'
+export const ASSERT_UTILITY_FOLDER_NAME = '__assert_utility__'
+export const FACTORY_FOLDER_NAME = '__factory__'
+export const TYPE_FOLDER_NAME = '__type__'
+export const UNION_TYPE_FOLDER_NAME = '__union_type__'

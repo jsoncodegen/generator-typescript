@@ -1,0 +1,37 @@
+{
+	"name": "jsoncodegen-generator-typescript",
+	"description": "jsoncodegen JSON to TypeScript code generator.",
+	"version": "1.0.0",
+	"author": {
+		"name": "András Parditka"
+	},
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jsoncodegen/generator-typescript.git"
+	},
+	"homepage": "https://github.com/jsoncodegen/generator-typescript",
+	"bugs": {
+		"url": "https://github.com/jsoncodegen/generator-typescript/issues"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.23",
+		"@types/node": "^12.12.7",
+		"@types/rimraf": "^2.0.3",
+		"jest": "^24.9.0",
+		"jsoncodegen": "^1.0.1",
+		"jsoncodegen-test-json": "^1.0.0",
+		"jsoncodegen-types-for-generator": "^1.0.1",
+		"rimraf": "^3.0.0",
+		"ts-jest": "^24.2.0",
+		"typescript": "^3.7.2"
+	},
+	"scripts": {
+		"compile": "rimraf dist && tsc -p .",
+		"watch": "rimraf dist && tsc -p . -w",
+		"generate": "jsoncodegen -i node_modules/jsoncodegen-test-json/dist -o test-project/src/generated -g ./dist -c test-project/jsoncodegen.config",
+		"test": "jest",
+		"test-output": "cd test-project && yarn && yarn compile && yarn test"
+	}
+}
