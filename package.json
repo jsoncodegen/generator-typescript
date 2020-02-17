@@ -1,7 +1,7 @@
 {
 	"name": "jsoncodegen-generator-typescript",
 	"description": "jsoncodegen JSON to TypeScript code generator.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"name": "András Parditka"
 	},
