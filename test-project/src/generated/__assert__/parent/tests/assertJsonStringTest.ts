@@ -43,6 +43,21 @@ export function assertJsonStringTest( o: any, isNullable?: boolean, path : strin
 			path + `.arrayOfNames`
 		)
 		__assert_utility___assertArray(
+			(value, path) => __assert_utility___assertArray(
+				(value, path) => __assert_utility___assertString(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.arrayOfArraysOfNames,
+			false,
+			path + `.arrayOfArraysOfNames`
+		)
+		__assert_utility___assertArray(
 			(value, path) => __assert_utility___assertString(
 				value,
 				true,
@@ -81,6 +96,21 @@ export function assertJsonStringTest( o: any, isNullable?: boolean, path : strin
 			o.mapOfNames,
 			false,
 			path + `.mapOfNames`
+		)
+		__assert_utility___assertMap(
+			(value, path) => __assert_utility___assertMap(
+				(value, path) => __assert_utility___assertString(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.mapOfMapsOfNames,
+			false,
+			path + `.mapOfMapsOfNames`
 		)
 		__assert_utility___assertMap(
 			(value, path) => __assert_utility___assertString(

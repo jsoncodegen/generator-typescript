@@ -44,6 +44,21 @@ export function assertJsonStringEnumParentTest( o: any, isNullable?: boolean, pa
 			path + `.arrayOfEnums`
 		)
 		__assert_utility___assertArray(
+			(value, path) => __assert_utility___assertArray(
+				(value, path) => __assert___parent_assertJsonStringEnum(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.arrayOfArraysOfEnums,
+			false,
+			path + `.arrayOfArraysOfEnums`
+		)
+		__assert_utility___assertArray(
 			(value, path) => __assert___parent_assertJsonStringEnum(
 				value,
 				true,
@@ -82,6 +97,21 @@ export function assertJsonStringEnumParentTest( o: any, isNullable?: boolean, pa
 			o.mapOfEnums,
 			false,
 			path + `.mapOfEnums`
+		)
+		__assert_utility___assertMap(
+			(value, path) => __assert_utility___assertMap(
+				(value, path) => __assert___parent_assertJsonStringEnum(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.mapOfMapsOfEnums,
+			false,
+			path + `.mapOfMapsOfEnums`
 		)
 		__assert_utility___assertMap(
 			(value, path) => __assert___parent_assertJsonStringEnum(

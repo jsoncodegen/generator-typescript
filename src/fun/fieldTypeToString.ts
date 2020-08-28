@@ -10,9 +10,13 @@ export function fieldTypeToString(context: IContext, fieldType: TFieldType) {
 	let result = ''
 	switch (fieldType.kind) {
 		case 'Array':
-			result = joinWith(` `)(
-				readonly,
-				join(fieldTypeToString(context, fieldType.fieldType), `[]`),
+			result = join(
+				`(`,
+				joinWith(` `)(
+					readonly,
+					join(fieldTypeToString(context, fieldType.fieldType), `[]`),
+				),
+				`)`,
 			)
 			break
 		case 'Map':
