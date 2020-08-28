@@ -43,6 +43,21 @@ export function assertJsonBooleanTest( o: any, isNullable?: boolean, path : stri
 			path + `.arrayOfFlags`
 		)
 		__assert_utility___assertArray(
+			(value, path) => __assert_utility___assertArray(
+				(value, path) => __assert_utility___assertBoolean(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.arrayOfArraysOfFlags,
+			false,
+			path + `.arrayOfArraysOfFlags`
+		)
+		__assert_utility___assertArray(
 			(value, path) => __assert_utility___assertBoolean(
 				value,
 				true,
@@ -81,6 +96,21 @@ export function assertJsonBooleanTest( o: any, isNullable?: boolean, path : stri
 			o.mapOfFlags,
 			false,
 			path + `.mapOfFlags`
+		)
+		__assert_utility___assertMap(
+			(value, path) => __assert_utility___assertMap(
+				(value, path) => __assert_utility___assertBoolean(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.mapOfMapsOfFlags,
+			false,
+			path + `.mapOfMapsOfFlags`
 		)
 		__assert_utility___assertMap(
 			(value, path) => __assert_utility___assertBoolean(

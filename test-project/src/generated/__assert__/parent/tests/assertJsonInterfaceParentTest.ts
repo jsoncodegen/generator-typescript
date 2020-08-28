@@ -43,6 +43,21 @@ export function assertJsonInterfaceParentTest( o: any, isNullable?: boolean, pat
 			path + `.arrayOfObjects`
 		)
 		__assert_utility___assertArray(
+			(value, path) => __assert_utility___assertArray(
+				(value, path) => __assert___parent_assertJsonInterface(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.arrayOfArraysOfObjects,
+			false,
+			path + `.arrayOfArraysOfObjects`
+		)
+		__assert_utility___assertArray(
 			(value, path) => __assert___parent_assertJsonInterface(
 				value,
 				true,
@@ -81,6 +96,21 @@ export function assertJsonInterfaceParentTest( o: any, isNullable?: boolean, pat
 			o.mapOfObjects,
 			false,
 			path + `.mapOfObjects`
+		)
+		__assert_utility___assertMap(
+			(value, path) => __assert_utility___assertMap(
+				(value, path) => __assert___parent_assertJsonInterface(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.mapOfMapsOfObjects,
+			false,
+			path + `.mapOfMapsOfObjects`
 		)
 		__assert_utility___assertMap(
 			(value, path) => __assert___parent_assertJsonInterface(

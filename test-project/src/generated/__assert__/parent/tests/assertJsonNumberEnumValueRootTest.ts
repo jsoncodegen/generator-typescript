@@ -48,6 +48,22 @@ export function assertJsonNumberEnumValueRootTest( o: any, isNullable?: boolean,
 			path + `.arrayOfEnumValues`
 		)
 		__assert_utility___assertArray(
+			(value, path) => __assert_utility___assertArray(
+				(value, path) => __assert_utility___assertExactValue(
+					JsonNumberEnum.Name,
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.arrayOfArraysOfEnumValues,
+			false,
+			path + `.arrayOfArraysOfEnumValues`
+		)
+		__assert_utility___assertArray(
 			(value, path) => __assert_utility___assertExactValue(
 				JsonNumberEnum.Name,
 				value,
@@ -90,6 +106,22 @@ export function assertJsonNumberEnumValueRootTest( o: any, isNullable?: boolean,
 			o.mapOfEnumValues,
 			false,
 			path + `.mapOfEnumValues`
+		)
+		__assert_utility___assertMap(
+			(value, path) => __assert_utility___assertMap(
+				(value, path) => __assert_utility___assertExactValue(
+					JsonNumberEnum.Name,
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.mapOfMapsOfEnumValues,
+			false,
+			path + `.mapOfMapsOfEnumValues`
 		)
 		__assert_utility___assertMap(
 			(value, path) => __assert_utility___assertExactValue(

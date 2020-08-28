@@ -43,6 +43,21 @@ export function assertJsonNumberTest( o: any, isNullable?: boolean, path : strin
 			path + `.arrayOfCounts`
 		)
 		__assert_utility___assertArray(
+			(value, path) => __assert_utility___assertArray(
+				(value, path) => __assert_utility___assertNumber(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.arrayOfArraysOfCounts,
+			false,
+			path + `.arrayOfArraysOfCounts`
+		)
+		__assert_utility___assertArray(
 			(value, path) => __assert_utility___assertNumber(
 				value,
 				true,
@@ -81,6 +96,21 @@ export function assertJsonNumberTest( o: any, isNullable?: boolean, path : strin
 			o.mapOfCounts,
 			false,
 			path + `.mapOfCounts`
+		)
+		__assert_utility___assertMap(
+			(value, path) => __assert_utility___assertMap(
+				(value, path) => __assert_utility___assertNumber(
+					value,
+					false,
+					path
+				),
+				value,
+				false,
+				path
+			),
+			o.mapOfMapsOfCounts,
+			false,
+			path + `.mapOfMapsOfCounts`
 		)
 		__assert_utility___assertMap(
 			(value, path) => __assert_utility___assertNumber(

@@ -2102,10 +2102,10 @@ json5@2.x, json5@^2.1.0:
   dependencies:
     minimist "^1.2.0"
 
-jsoncodegen-test-json@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/jsoncodegen-test-json/-/jsoncodegen-test-json-1.0.0.tgz#d6f6aaf50f43a2fe3a73a92cfce01a212f3608d7"
-  integrity sha512-yTDYOf5pcPrA/S2S4LuZrN95pIc1PPSXoKV4QHHT4QMAUFZCiv0ITuWnSEb9JwEmhNa1AVRnJK1wsj7N62iFGA==
+jsoncodegen-test-json@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jsoncodegen-test-json/-/jsoncodegen-test-json-1.1.0.tgz#ca5e5f107ea44f9c7b63f44af0485586290b05a9"
+  integrity sha512-+xp3XGfU0+9Mn3CXiu6XbOJBmWUEKfAJQFtYRMCZJtycGiIXj/99ET+HNQ+whmBJ5IF+i/qH1sYDkgl6sVyRbw==
 
 jsoncodegen-types-for-generator@^1.0.1:
   version "1.0.1"
