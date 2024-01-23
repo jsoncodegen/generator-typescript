@@ -1,5 +1,5 @@
-import { JsonStringEnum as parent_sibling_JsonStringEnum } from "../../../__type__/parent/sibling/JsonStringEnum"
-import { assertStringEnumValue as __assert_utility___assertStringEnumValue } from "../../../__assert_utility__/assertStringEnumValue"
+import { JsonStringEnum as parent_sibling_JsonStringEnum } from "../../../__type__/parent/sibling/JsonStringEnum.js"
+import { assertStringEnumValue as __assert_utility___assertStringEnumValue } from "../../../__assert_utility__/assertStringEnumValue.js"
 
 const __VALUES__ = [
 	parent_sibling_JsonStringEnum.Name,

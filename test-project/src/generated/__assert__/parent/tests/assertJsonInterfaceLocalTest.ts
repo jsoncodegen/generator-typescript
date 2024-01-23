@@ -1,8 +1,8 @@
-import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError"
-import { JsonInterfaceLocalTest as __type___parent_tests_JsonInterfaceLocalTest } from "../../../__type__/parent/tests/JsonInterfaceLocalTest"
-import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray"
-import { assertJsonInterface as __assert___parent_tests_assertJsonInterface } from "./assertJsonInterface"
-import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap"
+import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
+import { JsonInterfaceLocalTest as __type___parent_tests_JsonInterfaceLocalTest } from "../../../__type__/parent/tests/JsonInterfaceLocalTest.js"
+import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
+import { assertJsonInterface as __assert___parent_tests_assertJsonInterface } from "./assertJsonInterface.js"
+import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"
 
 export function assertJsonInterfaceLocalTest( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_tests_JsonInterfaceLocalTest | null | undefined
 export function assertJsonInterfaceLocalTest( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_tests_JsonInterfaceLocalTest

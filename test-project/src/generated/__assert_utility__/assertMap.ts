@@ -1,4 +1,4 @@
-import { AssertionError } from './AssertionError'
+import { AssertionError } from './AssertionError.js'
 
 export function assertMap( assertItem: (item: any, path: string) => void, map: any, isNullable : true   , path? : string ): asserts map is { [k: string]: any } | null | undefined
 export function assertMap( assertItem: (item: any, path: string) => void, map: any, isNullable?: boolean, path? : string ): asserts map is { [k: string]: any }

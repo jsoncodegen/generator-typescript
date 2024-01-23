@@ -1,5 +1,9 @@
-export function templateOfAssertArray() {
-	return `import { AssertionError } from './AssertionError'
+import { IConfig } from '../model/IConfig.js'
+
+export function templateOfAssertArray(config: IConfig) {
+	return `import { AssertionError } from './AssertionError${
+		config.importFileExtension ?? ''
+	}'
 
 export function assertArray( assertItem: (item: any, path: string) => void, array: any, isNullable : true   , path? : string ): asserts array is any[] | null | undefined
 export function assertArray( assertItem: (item: any, path: string) => void, array: any, isNullable?: boolean, path? : string ): asserts array is any[]

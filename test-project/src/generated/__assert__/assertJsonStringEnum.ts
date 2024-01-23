@@ -1,5 +1,5 @@
-import { JsonStringEnum as JsonStringEnum } from "../__type__/JsonStringEnum"
-import { assertStringEnumValue as __assert_utility___assertStringEnumValue } from "../__assert_utility__/assertStringEnumValue"
+import { JsonStringEnum as JsonStringEnum } from "../__type__/JsonStringEnum.js"
+import { assertStringEnumValue as __assert_utility___assertStringEnumValue } from "../__assert_utility__/assertStringEnumValue.js"
 
 const __VALUES__ = [
 	JsonStringEnum.Name,

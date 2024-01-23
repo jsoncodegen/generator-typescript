@@ -1,4 +1,4 @@
-import { AssertionError } from './AssertionError'
+import { AssertionError } from './AssertionError.js'
 
 export function assertNumberEnumValue( expected: number[], actual: any, isNullable : true   , path?: string ): asserts actual is number | null | undefined
 export function assertNumberEnumValue( expected: number[], actual: any, isNullable?: boolean, path?: string ): asserts actual is number

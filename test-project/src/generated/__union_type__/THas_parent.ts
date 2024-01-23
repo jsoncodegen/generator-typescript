@@ -1,5 +1,5 @@
-import { JsonNumberEnumValueMixedTest as __type___parent_tests_JsonNumberEnumValueMixedTest } from "../__type__/parent/tests/JsonNumberEnumValueMixedTest"
-import { JsonStringEnumValueMixedTest as __type___parent_tests_JsonStringEnumValueMixedTest } from "../__type__/parent/tests/JsonStringEnumValueMixedTest"
+import { JsonNumberEnumValueMixedTest as __type___parent_tests_JsonNumberEnumValueMixedTest } from "../__type__/parent/tests/JsonNumberEnumValueMixedTest.js"
+import { JsonStringEnumValueMixedTest as __type___parent_tests_JsonStringEnumValueMixedTest } from "../__type__/parent/tests/JsonStringEnumValueMixedTest.js"
 
 export type THas_parent =
 	| __type___parent_tests_JsonNumberEnumValueMixedTest

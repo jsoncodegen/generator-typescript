@@ -1,4 +1,4 @@
-import { JsonNumberEnum as __type___JsonNumberEnum } from "../../JsonNumberEnum"
+import { JsonNumberEnum as __type___JsonNumberEnum } from "../../JsonNumberEnum.js"
 
 /**
  * This tests number enum fields.

@@ -1,8 +1,8 @@
-import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError"
-import { JsonNumberTest as __type___parent_tests_JsonNumberTest } from "../../../__type__/parent/tests/JsonNumberTest"
-import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray"
-import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap"
-import { assertNumber as __assert_utility___assertNumber } from "../../../__assert_utility__/assertNumber"
+import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
+import { JsonNumberTest as __type___parent_tests_JsonNumberTest } from "../../../__type__/parent/tests/JsonNumberTest.js"
+import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
+import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"
+import { assertNumber as __assert_utility___assertNumber } from "../../../__assert_utility__/assertNumber.js"
 
 export function assertJsonNumberTest( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_tests_JsonNumberTest | null | undefined
 export function assertJsonNumberTest( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_tests_JsonNumberTest

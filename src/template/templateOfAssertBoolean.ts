@@ -1,5 +1,9 @@
-export function templateOfAssertBoolean() {
-	return `import { AssertionError } from './AssertionError'
+import { IConfig } from '../model/IConfig.js'
+
+export function templateOfAssertBoolean(config: IConfig) {
+	return `import { AssertionError } from './AssertionError${
+		config.importFileExtension ?? ''
+	}'
 
 export function assertBoolean( value: any, isNullable : true   , path?: string ): asserts value is boolean | null | undefined
 export function assertBoolean( value: any, isNullable?: boolean, path?: string ): asserts value is boolean

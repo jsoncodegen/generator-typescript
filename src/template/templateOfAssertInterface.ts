@@ -1,4 +1,4 @@
-import { indent } from '../fun/indent'
+import { indent } from '../fun/indent.js'
 
 export function templateOfAssertInterface({
 	imports,

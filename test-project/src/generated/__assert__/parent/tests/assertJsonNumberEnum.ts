@@ -1,5 +1,5 @@
-import { JsonNumberEnum as parent_tests_JsonNumberEnum } from "../../../__type__/parent/tests/JsonNumberEnum"
-import { assertNumberEnumValue as __assert_utility___assertNumberEnumValue } from "../../../__assert_utility__/assertNumberEnumValue"
+import { JsonNumberEnum as parent_tests_JsonNumberEnum } from "../../../__type__/parent/tests/JsonNumberEnum.js"
+import { assertNumberEnumValue as __assert_utility___assertNumberEnumValue } from "../../../__assert_utility__/assertNumberEnumValue.js"
 
 const __VALUES__ = [
 	parent_tests_JsonNumberEnum.Name,

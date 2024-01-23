@@ -1,5 +1,9 @@
-export function templateOfAssertMap() {
-	return `import { AssertionError } from './AssertionError'
+import { IConfig } from '../model/IConfig.js'
+
+export function templateOfAssertMap(config: IConfig) {
+	return `import { AssertionError } from './AssertionError${
+		config.importFileExtension ?? ''
+	}'
 
 export function assertMap( assertItem: (item: any, path: string) => void, map: any, isNullable : true   , path? : string ): asserts map is { [k: string]: any } | null | undefined
 export function assertMap( assertItem: (item: any, path: string) => void, map: any, isNullable?: boolean, path? : string ): asserts map is { [k: string]: any }

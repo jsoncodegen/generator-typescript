@@ -1,4 +1,4 @@
-import { JsonInterface as __type___JsonInterface } from "../../JsonInterface"
+import { JsonInterface as __type___JsonInterface } from "../../JsonInterface.js"
 
 /**
  * This tests interface fields.

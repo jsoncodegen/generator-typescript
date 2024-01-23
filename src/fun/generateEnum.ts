@@ -4,21 +4,23 @@ import {
 	INumberEnumValue,
 	IStringEnum,
 } from 'jsoncodegen-types-for-generator'
-import { TYPE_FOLDER_NAME } from '../model/constants'
-import { templateOfEnum } from '../template/templateOfEnum'
-import { generateEnumAssert } from './generateEnumAssert'
-import { indent } from './indent'
-import { joinArrayWith } from './joinArrayWith'
-import { joinWith } from './joinWith'
-import { lineBreakBefore } from './lineBreakBefore'
-import { makeComment } from './makeComment'
+import { IConfig } from '../model/IConfig.js'
+import { TYPE_FOLDER_NAME } from '../model/constants.js'
+import { templateOfEnum } from '../template/templateOfEnum.js'
+import { generateEnumAssert } from './generateEnumAssert.js'
+import { indent } from './indent.js'
+import { joinArrayWith } from './joinArrayWith.js'
+import { joinWith } from './joinWith.js'
+import { lineBreakBefore } from './lineBreakBefore.js'
+import { makeComment } from './makeComment.js'
 
 export async function generateEnum(
+	config: IConfig,
 	info: IStringEnum | INumberEnum,
 ): Promise<IGeneratorResult[]> {
 	const { directoryPath, name, values, description } = info
 	const enumValueDeclarations = joinArrayWith(`\n`)(
-		(values as INumberEnumValue[]).map(t => {
+		(values as INumberEnumValue[]).map((t) => {
 			const comment = lineBreakBefore(indent(makeComment(t.description)))
 			const declaration = `\t${t.name} = ${JSON.stringify(t.value)},`
 			return joinWith(`\n`)(comment, declaration)
@@ -34,6 +36,6 @@ export async function generateEnum(
 			filePath: [TYPE_FOLDER_NAME, ...directoryPath, name + '.ts'],
 			content: joinWith(`\n`)(comment, declaration),
 		},
-		await generateEnumAssert(info),
+		await generateEnumAssert(config, info),
 	]
 }

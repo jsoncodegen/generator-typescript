@@ -1,4 +1,4 @@
-import { JsonNumberEnum as __type___parent_sibling_JsonNumberEnum } from "../sibling/JsonNumberEnum"
+import { JsonNumberEnum as __type___parent_sibling_JsonNumberEnum } from "../sibling/JsonNumberEnum.js"
 
 /**
  * This tests number enum value fields.

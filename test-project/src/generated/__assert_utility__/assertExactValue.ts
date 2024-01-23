@@ -1,4 +1,4 @@
-import { AssertionError } from './AssertionError'
+import { AssertionError } from './AssertionError.js'
 
 export function assertExactValue<T>( expected: T, actual: any, isNullable : true   , path?: string ): asserts actual is T | null | undefined
 export function assertExactValue<T>( expected: T, actual: any, isNullable?: boolean, path?: string ): asserts actual is T

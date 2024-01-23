@@ -1,9 +1,9 @@
-import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError"
-import { JsonNumberEnum as parent_tests_child_JsonNumberEnum } from "../../../__type__/parent/tests/child/JsonNumberEnum"
-import { JsonNumberEnumValueChildTest as __type___parent_tests_JsonNumberEnumValueChildTest } from "../../../__type__/parent/tests/JsonNumberEnumValueChildTest"
-import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray"
-import { assertExactValue as __assert_utility___assertExactValue } from "../../../__assert_utility__/assertExactValue"
-import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap"
+import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
+import { JsonNumberEnum as parent_tests_child_JsonNumberEnum } from "../../../__type__/parent/tests/child/JsonNumberEnum.js"
+import { JsonNumberEnumValueChildTest as __type___parent_tests_JsonNumberEnumValueChildTest } from "../../../__type__/parent/tests/JsonNumberEnumValueChildTest.js"
+import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
+import { assertExactValue as __assert_utility___assertExactValue } from "../../../__assert_utility__/assertExactValue.js"
+import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"
 
 export function assertJsonNumberEnumValueChildTest( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_tests_JsonNumberEnumValueChildTest | null | undefined
 export function assertJsonNumberEnumValueChildTest( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_tests_JsonNumberEnumValueChildTest

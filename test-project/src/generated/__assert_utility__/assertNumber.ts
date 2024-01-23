@@ -1,4 +1,4 @@
-import { AssertionError } from './AssertionError'
+import { AssertionError } from './AssertionError.js'
 
 export function assertNumber( value: any, isNullable : true   , path?: string ): asserts value is number | null | undefined
 export function assertNumber( value: any, isNullable?: boolean, path?: string ): asserts value is number

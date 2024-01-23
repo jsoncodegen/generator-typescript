@@ -1,4 +1,4 @@
-import { JsonStringEnum as __type___parent_tests_child_JsonStringEnum } from "./child/JsonStringEnum"
+import { JsonStringEnum as __type___parent_tests_child_JsonStringEnum } from "./child/JsonStringEnum.js"
 
 /**
  * This tests string enum value fields.

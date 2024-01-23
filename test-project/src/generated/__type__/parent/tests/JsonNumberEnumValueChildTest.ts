@@ -1,4 +1,4 @@
-import { JsonNumberEnum as __type___parent_tests_child_JsonNumberEnum } from "./child/JsonNumberEnum"
+import { JsonNumberEnum as __type___parent_tests_child_JsonNumberEnum } from "./child/JsonNumberEnum.js"
 
 /**
  * This tests number enum value fields.

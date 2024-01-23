@@ -1,8 +1,8 @@
-import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError"
-import { JsonInterfaceSiblingTest as __type___parent_tests_JsonInterfaceSiblingTest } from "../../../__type__/parent/tests/JsonInterfaceSiblingTest"
-import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray"
-import { assertJsonInterface as __assert___parent_sibling_assertJsonInterface } from "../sibling/assertJsonInterface"
-import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap"
+import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
+import { JsonInterfaceSiblingTest as __type___parent_tests_JsonInterfaceSiblingTest } from "../../../__type__/parent/tests/JsonInterfaceSiblingTest.js"
+import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
+import { assertJsonInterface as __assert___parent_sibling_assertJsonInterface } from "../sibling/assertJsonInterface.js"
+import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"
 
 export function assertJsonInterfaceSiblingTest( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_tests_JsonInterfaceSiblingTest | null | undefined
 export function assertJsonInterfaceSiblingTest( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_tests_JsonInterfaceSiblingTest

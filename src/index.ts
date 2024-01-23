@@ -4,13 +4,13 @@ import {
 	IInterface,
 	TGeneratorResult,
 } from 'jsoncodegen-types-for-generator'
-import { generateEnum } from './fun/generateEnum'
-import { generateExtras } from './fun/generateExtras'
-import { generateInterface } from './fun/generateInterface'
-import { generateUnionTypes } from './fun/generateUnionTypes'
-import { IConfig } from './model/IConfig'
+import { generateEnum } from './fun/generateEnum.js'
+import { generateExtras } from './fun/generateExtras.js'
+import { generateInterface } from './fun/generateInterface.js'
+import { generateUnionTypes } from './fun/generateUnionTypes.js'
+import { IConfig } from './model/IConfig.js'
 
-const generator: IGenerator = {
+export const generator: IGenerator = {
 	async generate(config: IConfig, namedTypesById): Promise<TGeneratorResult> {
 		let result: IGeneratorResult[] = []
 		const interfacesByEnumValueField = new Map<string, IInterface[]>()
@@ -29,17 +29,15 @@ const generator: IGenerator = {
 					break
 				case 'NumberEnum':
 				case 'StringEnum':
-					result = [...result, ...(await generateEnum(namedType))]
+					result = [...result, ...(await generateEnum(config, namedType))]
 					break
 			}
 		}
 		result = [
 			...result,
-			...(await generateUnionTypes(interfacesByEnumValueField)),
-			...(await generateExtras()),
+			...(await generateUnionTypes(config, interfacesByEnumValueField)),
+			...(await generateExtras(config)),
 		]
 		return result
 	},
 }
-
-module.exports = generator

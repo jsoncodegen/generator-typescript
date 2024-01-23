@@ -4,23 +4,22 @@ import {
 	INumberEnumValue,
 	IStringEnum,
 } from 'jsoncodegen-types-for-generator'
+import { IConfig } from '../model/IConfig.js'
 import {
 	ASSERT_FOLDER_NAME,
 	ASSERT_UTILITY_FOLDER_NAME,
 	TYPE_FOLDER_NAME,
-} from '../model/constants'
-import { templateOfAssertEnum } from '../template/templateOfAssertEnum'
-import { templateOfImport } from '../template/templateOfImport'
-import { indent } from './indent'
-import { joinArrayWith } from './joinArrayWith'
-import { joinWith } from './joinWith'
+} from '../model/constants.js'
+import { templateOfAssertEnum } from '../template/templateOfAssertEnum.js'
+import { templateOfImport } from '../template/templateOfImport.js'
+import { indent } from './indent.js'
+import { joinArrayWith } from './joinArrayWith.js'
+import { joinWith } from './joinWith.js'
 
-export async function generateEnumAssert({
-	directoryPath,
-	values,
-	name,
-	kind,
-}: IStringEnum | INumberEnum): Promise<IGeneratorResult> {
+export async function generateEnumAssert(
+	config: IConfig,
+	{ directoryPath, values, name, kind }: IStringEnum | INumberEnum,
+): Promise<IGeneratorResult> {
 	const imports = new Set<string>()
 	const rootFolderRelativePath = [...directoryPath.map(() => `..`), '..']
 	const assertUtilityFolderRelativePath = [
@@ -29,9 +28,7 @@ export async function generateEnumAssert({
 	]
 	const typeFolderRelativePath = [...rootFolderRelativePath, TYPE_FOLDER_NAME]
 	const assertFunName =
-		kind === 'StringEnum'
-			? `assertStringEnumValue`
-			: `assertNumberEnumValue`
+		kind === 'StringEnum' ? `assertStringEnumValue` : `assertNumberEnumValue`
 	const assertFunPath = [...assertUtilityFolderRelativePath, assertFunName]
 	const assertFunAlias = joinWith(`_`)(
 		ASSERT_UTILITY_FOLDER_NAME,
@@ -39,6 +36,7 @@ export async function generateEnumAssert({
 	)
 	imports.add(
 		templateOfImport({
+			config,
 			path: joinArrayWith(`/`)(assertFunPath),
 			typeName: assertFunName,
 			alias: assertFunAlias,
@@ -47,11 +45,8 @@ export async function generateEnumAssert({
 	const enumAlias = joinWith(`_`)(...directoryPath, name)
 	imports.add(
 		templateOfImport({
-			path: joinWith(`/`)(
-				...typeFolderRelativePath,
-				...directoryPath,
-				name,
-			),
+			config,
+			path: joinWith(`/`)(...typeFolderRelativePath, ...directoryPath, name),
 			typeName: name,
 			alias: enumAlias,
 		}),
@@ -60,7 +55,7 @@ export async function generateEnumAssert({
 		'[',
 		indent(
 			joinArrayWith(`,\n`)(
-				(values as INumberEnumValue[]).map(value =>
+				(values as INumberEnumValue[]).map((value) =>
 					joinWith(`.`)(enumAlias, value.name),
 				),
 			),

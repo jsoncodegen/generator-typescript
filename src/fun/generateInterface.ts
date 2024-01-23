@@ -6,21 +6,21 @@ import {
 	TFieldType,
 	TNamedType,
 } from 'jsoncodegen-types-for-generator'
-import { TYPE_FOLDER_NAME } from '../model/constants'
-import { IConfig } from '../model/IConfig'
-import { IContext } from '../model/IContext'
-import { templateOfImport } from '../template/templateOfImport'
-import { templateOfInterface } from '../template/templateOfInterface'
-import { fieldTypeToString } from './fieldTypeToString'
-import { generateFactory } from './generateFactory'
-import { generateInterfaceAssert } from './generateInterfaceAssert'
-import { indent } from './indent'
-import { join } from './join'
-import { joinArrayWith } from './joinArrayWith'
-import { joinWith } from './joinWith'
-import { lineBreakBefore } from './lineBreakBefore'
-import { makeComment } from './makeComment'
-import { namedFieldTypeLocalName } from './namedFieldTypeLocalName'
+import { IConfig } from '../model/IConfig.js'
+import { IContext } from '../model/IContext.js'
+import { TYPE_FOLDER_NAME } from '../model/constants.js'
+import { templateOfImport } from '../template/templateOfImport.js'
+import { templateOfInterface } from '../template/templateOfInterface.js'
+import { fieldTypeToString } from './fieldTypeToString.js'
+import { generateFactory } from './generateFactory.js'
+import { generateInterfaceAssert } from './generateInterfaceAssert.js'
+import { indent } from './indent.js'
+import { join } from './join.js'
+import { joinArrayWith } from './joinArrayWith.js'
+import { joinWith } from './joinWith.js'
+import { lineBreakBefore } from './lineBreakBefore.js'
+import { makeComment } from './makeComment.js'
+import { namedFieldTypeLocalName } from './namedFieldTypeLocalName.js'
 
 export async function generateInterface(
 	config: IConfig,
@@ -40,11 +40,12 @@ export async function generateInterface(
 	}
 	const imports = new Set<string>()
 	const fieldDeclarations = joinArrayWith(`\n`)(
-		interfaceFields.map(field => {
+		interfaceFields.map((field) => {
 			const wrappedType = getWrappedType(field.fieldType)
 			if (wrappedType.kind !== 'PrimitiveValue') {
 				imports.add(
 					templateOfImport({
+						config,
 						typeName: wrappedType.name,
 						alias: namedFieldTypeLocalName(wrappedType),
 						path: joinWith('/')(
@@ -55,9 +56,7 @@ export async function generateInterface(
 				)
 			}
 
-			const comment = lineBreakBefore(
-				indent(makeComment(field.description)),
-			)
+			const comment = lineBreakBefore(indent(makeComment(field.description)))
 			const typeString = fieldTypeToString(context, field.fieldType)
 			const optional = field.fieldType.isNullable ? `?` : ``
 			const fieldDeclaration = join(
@@ -75,7 +74,7 @@ export async function generateInterface(
 		fieldDeclarations,
 	})
 	const enumValueFields = interfaceFields.filter(
-		field =>
+		(field) =>
 			(field.fieldType.kind === 'StringEnumValueReference' ||
 				field.fieldType.kind === 'NumberEnumValueReference') &&
 			!field.fieldType.isNullable,
@@ -88,18 +87,14 @@ export async function generateInterface(
 	const importDeclarations = joinArrayWith(`\n`)(Array.from(imports).sort())
 	return [
 		{
-			filePath: [
-				TYPE_FOLDER_NAME,
-				...directoryPath,
-				interfaceName + `.ts`,
-			],
+			filePath: [TYPE_FOLDER_NAME, ...directoryPath, interfaceName + `.ts`],
 			content: joinWith(`\n\n`)(
 				importDeclarations,
 				comment,
 				interfaceDeclaration,
 			),
 		},
-		await generateFactory(info),
+		await generateFactory(config, info),
 		await generateInterfaceAssert(config, info, namedTypesById),
 	]
 }

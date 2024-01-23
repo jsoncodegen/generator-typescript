@@ -1,8 +1,8 @@
-import { JsonNumberEnum as __type___JsonNumberEnum } from "../../JsonNumberEnum"
-import { JsonNumberEnum as __type___parent_JsonNumberEnum } from "../JsonNumberEnum"
-import { JsonNumberEnum as __type___parent_sibling_JsonNumberEnum } from "../sibling/JsonNumberEnum"
-import { JsonNumberEnum as __type___parent_tests_JsonNumberEnum } from "./JsonNumberEnum"
-import { JsonNumberEnum as __type___parent_tests_child_JsonNumberEnum } from "./child/JsonNumberEnum"
+import { JsonNumberEnum as __type___JsonNumberEnum } from "../../JsonNumberEnum.js"
+import { JsonNumberEnum as __type___parent_JsonNumberEnum } from "../JsonNumberEnum.js"
+import { JsonNumberEnum as __type___parent_sibling_JsonNumberEnum } from "../sibling/JsonNumberEnum.js"
+import { JsonNumberEnum as __type___parent_tests_JsonNumberEnum } from "./JsonNumberEnum.js"
+import { JsonNumberEnum as __type___parent_tests_child_JsonNumberEnum } from "./child/JsonNumberEnum.js"
 
 /**
  * This tests number enum fields.

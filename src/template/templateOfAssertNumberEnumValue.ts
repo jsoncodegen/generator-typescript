@@ -1,5 +1,9 @@
-export function templateOfAssertNumberEnumValue() {
-	return `import { AssertionError } from './AssertionError'
+import { IConfig } from '../model/IConfig.js'
+
+export function templateOfAssertNumberEnumValue(config: IConfig) {
+	return `import { AssertionError } from './AssertionError${
+		config.importFileExtension ?? ''
+	}'
 
 export function assertNumberEnumValue( expected: number[], actual: any, isNullable : true   , path?: string ): asserts actual is number | null | undefined
 export function assertNumberEnumValue( expected: number[], actual: any, isNullable?: boolean, path?: string ): asserts actual is number

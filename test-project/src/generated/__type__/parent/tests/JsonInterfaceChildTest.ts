@@ -1,4 +1,4 @@
-import { JsonInterface as __type___parent_tests_child_JsonInterface } from "./child/JsonInterface"
+import { JsonInterface as __type___parent_tests_child_JsonInterface } from "./child/JsonInterface.js"
 
 /**
  * This tests interface fields.

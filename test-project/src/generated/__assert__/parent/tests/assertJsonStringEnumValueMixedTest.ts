@@ -1,11 +1,11 @@
-import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError"
-import { JsonStringEnum as JsonStringEnum } from "../../../__type__/JsonStringEnum"
-import { JsonStringEnum as parent_JsonStringEnum } from "../../../__type__/parent/JsonStringEnum"
-import { JsonStringEnum as parent_sibling_JsonStringEnum } from "../../../__type__/parent/sibling/JsonStringEnum"
-import { JsonStringEnum as parent_tests_JsonStringEnum } from "../../../__type__/parent/tests/JsonStringEnum"
-import { JsonStringEnum as parent_tests_child_JsonStringEnum } from "../../../__type__/parent/tests/child/JsonStringEnum"
-import { JsonStringEnumValueMixedTest as __type___parent_tests_JsonStringEnumValueMixedTest } from "../../../__type__/parent/tests/JsonStringEnumValueMixedTest"
-import { assertExactValue as __assert_utility___assertExactValue } from "../../../__assert_utility__/assertExactValue"
+import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
+import { JsonStringEnum as JsonStringEnum } from "../../../__type__/JsonStringEnum.js"
+import { JsonStringEnum as parent_JsonStringEnum } from "../../../__type__/parent/JsonStringEnum.js"
+import { JsonStringEnum as parent_sibling_JsonStringEnum } from "../../../__type__/parent/sibling/JsonStringEnum.js"
+import { JsonStringEnum as parent_tests_JsonStringEnum } from "../../../__type__/parent/tests/JsonStringEnum.js"
+import { JsonStringEnum as parent_tests_child_JsonStringEnum } from "../../../__type__/parent/tests/child/JsonStringEnum.js"
+import { JsonStringEnumValueMixedTest as __type___parent_tests_JsonStringEnumValueMixedTest } from "../../../__type__/parent/tests/JsonStringEnumValueMixedTest.js"
+import { assertExactValue as __assert_utility___assertExactValue } from "../../../__assert_utility__/assertExactValue.js"
 
 export function assertJsonStringEnumValueMixedTest( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_tests_JsonStringEnumValueMixedTest | null | undefined
 export function assertJsonStringEnumValueMixedTest( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_tests_JsonStringEnumValueMixedTest

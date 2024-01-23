@@ -1,4 +1,4 @@
-import { AssertionError } from './AssertionError'
+import { AssertionError } from './AssertionError.js'
 
 export function assertArray( assertItem: (item: any, path: string) => void, array: any, isNullable : true   , path? : string ): asserts array is any[] | null | undefined
 export function assertArray( assertItem: (item: any, path: string) => void, array: any, isNullable?: boolean, path? : string ): asserts array is any[]

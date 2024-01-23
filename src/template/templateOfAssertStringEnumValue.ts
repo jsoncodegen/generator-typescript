@@ -1,5 +1,9 @@
-export function templateOfAssertStringEnumValue() {
-	return `import { AssertionError } from './AssertionError'
+import { IConfig } from '../model/IConfig.js'
+
+export function templateOfAssertStringEnumValue(config: IConfig) {
+	return `import { AssertionError } from './AssertionError${
+		config.importFileExtension ?? ''
+	}'
 
 export function assertStringEnumValue( expected: string[], actual: any, isNullable : true   , path?: string ): asserts actual is string | null | undefined
 export function assertStringEnumValue( expected: string[], actual: any, isNullable?: boolean, path?: string ): asserts actual is string

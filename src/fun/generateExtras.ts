@@ -1,28 +1,31 @@
 import { IGeneratorResult } from 'jsoncodegen-types-for-generator'
-import { ASSERT_UTILITY_FOLDER_NAME } from '../model/constants'
-import { templateOfAssertArray } from '../template/templateOfAssertArray'
-import { templateOfAssertBoolean } from '../template/templateOfAssertBoolean'
-import { templateOfAssertExactValue } from '../template/templateOfAssertExactValue'
-import { templateOfAssertionError } from '../template/templateOfAssertionError'
-import { templateOfAssertMap } from '../template/templateOfAssertMap'
-import { templateOfAssertNumber } from '../template/templateOfAssertNumber'
-import { templateOfAssertNumberEnumValue } from '../template/templateOfAssertNumberEnumValue'
-import { templateOfAssertString } from '../template/templateOfAssertString'
-import { templateOfAssertStringEnumValue } from '../template/templateOfAssertStringEnumValue'
+import { IConfig } from '../model/IConfig.js'
+import { ASSERT_UTILITY_FOLDER_NAME } from '../model/constants.js'
+import { templateOfAssertArray } from '../template/templateOfAssertArray.js'
+import { templateOfAssertBoolean } from '../template/templateOfAssertBoolean.js'
+import { templateOfAssertExactValue } from '../template/templateOfAssertExactValue.js'
+import { templateOfAssertMap } from '../template/templateOfAssertMap.js'
+import { templateOfAssertNumber } from '../template/templateOfAssertNumber.js'
+import { templateOfAssertNumberEnumValue } from '../template/templateOfAssertNumberEnumValue.js'
+import { templateOfAssertString } from '../template/templateOfAssertString.js'
+import { templateOfAssertStringEnumValue } from '../template/templateOfAssertStringEnumValue.js'
+import { templateOfAssertionError } from '../template/templateOfAssertionError.js'
 
-export async function generateExtras(): Promise<IGeneratorResult[]> {
+export async function generateExtras(
+	config: IConfig,
+): Promise<IGeneratorResult[]> {
 	return [
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertArray.ts'],
-			content: templateOfAssertArray(),
+			content: templateOfAssertArray(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertBoolean.ts'],
-			content: templateOfAssertBoolean(),
+			content: templateOfAssertBoolean(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertExactValue.ts'],
-			content: templateOfAssertExactValue(),
+			content: templateOfAssertExactValue(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'AssertionError.ts'],
@@ -30,23 +33,23 @@ export async function generateExtras(): Promise<IGeneratorResult[]> {
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertMap.ts'],
-			content: templateOfAssertMap(),
+			content: templateOfAssertMap(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertNumber.ts'],
-			content: templateOfAssertNumber(),
+			content: templateOfAssertNumber(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertNumberEnumValue.ts'],
-			content: templateOfAssertNumberEnumValue(),
+			content: templateOfAssertNumberEnumValue(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertString.ts'],
-			content: templateOfAssertString(),
+			content: templateOfAssertString(config),
 		},
 		{
 			filePath: [ASSERT_UTILITY_FOLDER_NAME, 'assertStringEnumValue.ts'],
-			content: templateOfAssertStringEnumValue(),
+			content: templateOfAssertStringEnumValue(config),
 		},
 	]
 }

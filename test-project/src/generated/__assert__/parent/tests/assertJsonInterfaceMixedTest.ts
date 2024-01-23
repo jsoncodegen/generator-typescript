@@ -1,10 +1,10 @@
-import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError"
-import { JsonInterfaceMixedTest as __type___parent_tests_JsonInterfaceMixedTest } from "../../../__type__/parent/tests/JsonInterfaceMixedTest"
-import { assertJsonInterface as __assert___assertJsonInterface } from "../../assertJsonInterface"
-import { assertJsonInterface as __assert___parent_assertJsonInterface } from "../assertJsonInterface"
-import { assertJsonInterface as __assert___parent_sibling_assertJsonInterface } from "../sibling/assertJsonInterface"
-import { assertJsonInterface as __assert___parent_tests_assertJsonInterface } from "./assertJsonInterface"
-import { assertJsonInterface as __assert___parent_tests_child_assertJsonInterface } from "./child/assertJsonInterface"
+import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
+import { JsonInterfaceMixedTest as __type___parent_tests_JsonInterfaceMixedTest } from "../../../__type__/parent/tests/JsonInterfaceMixedTest.js"
+import { assertJsonInterface as __assert___assertJsonInterface } from "../../assertJsonInterface.js"
+import { assertJsonInterface as __assert___parent_assertJsonInterface } from "../assertJsonInterface.js"
+import { assertJsonInterface as __assert___parent_sibling_assertJsonInterface } from "../sibling/assertJsonInterface.js"
+import { assertJsonInterface as __assert___parent_tests_assertJsonInterface } from "./assertJsonInterface.js"
+import { assertJsonInterface as __assert___parent_tests_child_assertJsonInterface } from "./child/assertJsonInterface.js"
 
 export function assertJsonInterfaceMixedTest( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_tests_JsonInterfaceMixedTest | null | undefined
 export function assertJsonInterfaceMixedTest( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_tests_JsonInterfaceMixedTest

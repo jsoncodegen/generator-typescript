@@ -1,5 +1,9 @@
-export function templateOfAssertNumber() {
-	return `import { AssertionError } from './AssertionError'
+import { IConfig } from '../model/IConfig.js'
+
+export function templateOfAssertNumber(config: IConfig) {
+	return `import { AssertionError } from './AssertionError${
+		config.importFileExtension ?? ''
+	}'
 
 export function assertNumber( value: any, isNullable : true   , path?: string ): asserts value is number | null | undefined
 export function assertNumber( value: any, isNullable?: boolean, path?: string ): asserts value is number

@@ -1,8 +1,8 @@
-import { JsonStringEnum as __type___JsonStringEnum } from "../../JsonStringEnum"
-import { JsonStringEnum as __type___parent_JsonStringEnum } from "../JsonStringEnum"
-import { JsonStringEnum as __type___parent_sibling_JsonStringEnum } from "../sibling/JsonStringEnum"
-import { JsonStringEnum as __type___parent_tests_JsonStringEnum } from "./JsonStringEnum"
-import { JsonStringEnum as __type___parent_tests_child_JsonStringEnum } from "./child/JsonStringEnum"
+import { JsonStringEnum as __type___JsonStringEnum } from "../../JsonStringEnum.js"
+import { JsonStringEnum as __type___parent_JsonStringEnum } from "../JsonStringEnum.js"
+import { JsonStringEnum as __type___parent_sibling_JsonStringEnum } from "../sibling/JsonStringEnum.js"
+import { JsonStringEnum as __type___parent_tests_JsonStringEnum } from "./JsonStringEnum.js"
+import { JsonStringEnum as __type___parent_tests_child_JsonStringEnum } from "./child/JsonStringEnum.js"
 
 /**
  * This tests string enum fields.

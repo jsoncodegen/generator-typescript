@@ -1,9 +1,9 @@
 import { TFieldType } from 'jsoncodegen-types-for-generator'
-import { IContext } from '../model/IContext'
-import { join } from './join'
-import { joinWith } from './joinWith'
-import { namedFieldTypeLocalName } from './namedFieldTypeLocalName'
-import { namedFieldTypeLocalNameWithEnumValue } from './namedFieldTypeLocalNameWithEnumValue'
+import { IContext } from '../model/IContext.js'
+import { join } from './join.js'
+import { joinWith } from './joinWith.js'
+import { namedFieldTypeLocalName } from './namedFieldTypeLocalName.js'
+import { namedFieldTypeLocalNameWithEnumValue } from './namedFieldTypeLocalNameWithEnumValue.js'
 
 export function fieldTypeToString(context: IContext, fieldType: TFieldType) {
 	const { readonly } = context

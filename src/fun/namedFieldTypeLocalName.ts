@@ -5,8 +5,8 @@ import {
 	IStringEnumReference,
 	IStringEnumValueReference,
 } from 'jsoncodegen-types-for-generator'
-import { TYPE_FOLDER_NAME } from '../model/constants'
-import { joinWith } from './joinWith'
+import { TYPE_FOLDER_NAME } from '../model/constants.js'
+import { joinWith } from './joinWith.js'
 
 export function namedFieldTypeLocalName(
 	t:

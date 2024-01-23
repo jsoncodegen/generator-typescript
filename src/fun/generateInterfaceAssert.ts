@@ -1,13 +1,23 @@
-import { IGeneratorResult, IInterface, IInterfaceField, TFieldType, TNamedType } from 'jsoncodegen-types-for-generator'
-import { ASSERT_FOLDER_NAME, ASSERT_UTILITY_FOLDER_NAME, TYPE_FOLDER_NAME } from '../model/constants'
-import { IConfig } from '../model/IConfig'
-import { templateOfAssertInterface } from '../template/templateOfAssertInterface'
-import { templateOfImport } from '../template/templateOfImport'
-import { capitalize } from './capitalize'
-import { indent } from './indent'
-import { join } from './join'
-import { joinArrayWith } from './joinArrayWith'
-import { joinWith } from './joinWith'
+import {
+	IGeneratorResult,
+	IInterface,
+	IInterfaceField,
+	TFieldType,
+	TNamedType,
+} from 'jsoncodegen-types-for-generator'
+import { IConfig } from '../model/IConfig.js'
+import {
+	ASSERT_FOLDER_NAME,
+	ASSERT_UTILITY_FOLDER_NAME,
+	TYPE_FOLDER_NAME,
+} from '../model/constants.js'
+import { templateOfAssertInterface } from '../template/templateOfAssertInterface.js'
+import { templateOfImport } from '../template/templateOfImport.js'
+import { capitalize } from './capitalize.js'
+import { indent } from './indent.js'
+import { join } from './join.js'
+import { joinArrayWith } from './joinArrayWith.js'
+import { joinWith } from './joinWith.js'
 
 export async function generateInterfaceAssert(
 	config: IConfig,
@@ -25,33 +35,24 @@ export async function generateInterfaceAssert(
 		ASSERT_UTILITY_FOLDER_NAME,
 		`AssertionError`,
 	)
-	const interfaceAlias = joinWith(`_`)(
-		TYPE_FOLDER_NAME,
-		...directoryPath,
-		name,
-	)
+	const interfaceAlias = joinWith(`_`)(TYPE_FOLDER_NAME, ...directoryPath, name)
 	imports.add(
 		templateOfImport({
-			path: joinWith(`/`)(
-				...typeFolderRelativePath,
-				...directoryPath,
-				name,
-			),
+			config,
+			path: joinWith(`/`)(...typeFolderRelativePath, ...directoryPath, name),
 			typeName: name,
 			alias: interfaceAlias,
 		}),
 	)
 	imports.add(
 		templateOfImport({
-			path: joinWith(`/`)(
-				...assertUtilityFolderRelativePath,
-				`AssertionError`,
-			),
+			config,
+			path: joinWith(`/`)(...assertUtilityFolderRelativePath, `AssertionError`),
 			typeName: `AssertionError`,
 			alias: assertionErrorAlias,
 		}),
 	)
-	const assertions = fields.map(field => wrap(field.fieldType, field))
+	const assertions = fields.map((field) => wrap(field.fieldType, field))
 	return {
 		filePath: [ASSERT_FOLDER_NAME, ...directoryPath, `assert${name}.ts`],
 		content: templateOfAssertInterface({
@@ -131,6 +132,7 @@ export async function generateInterfaceAssert(
 		}
 		imports.add(
 			templateOfImport({
+				config,
 				path: assertFunPath,
 				typeName: assertFunName,
 				alias: assertFunAlias,
@@ -143,6 +145,7 @@ export async function generateInterfaceAssert(
 			case 'NumberEnumValueReference':
 				imports.add(
 					templateOfImport({
+						config,
 						path: joinWith('/')(
 							...typeFolderRelativePath,
 							...fieldType.absoluteDirectoryPath,
@@ -158,10 +161,7 @@ export async function generateInterfaceAssert(
 		switch (fieldType.kind) {
 			case 'Array':
 			case 'Map':
-				validation = `(value, path) => ${wrap(
-					fieldType.fieldType,
-					field,
-				)}`
+				validation = `(value, path) => ${wrap(fieldType.fieldType, field)}`
 				break
 			case 'StringEnumValueReference':
 			case 'NumberEnumValueReference':
@@ -178,10 +178,10 @@ export async function generateInterfaceAssert(
 					fieldType.isNullable + '',
 					field.fieldType === fieldType
 						? `path + \`.${joinWith(`:`)(
-							field.name,
-							fieldTypeName,
-							fieldTypeValueName,
-						)}\``
+								field.name,
+								fieldTypeName,
+								fieldTypeValueName,
+						  )}\``
 						: `path`,
 				),
 			),

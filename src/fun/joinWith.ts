@@ -1,4 +1,4 @@
-import { joinArrayWith } from './joinArrayWith'
+import { joinArrayWith } from './joinArrayWith.js'
 
 export function joinWith(separator: string) {
 	const joiner = joinArrayWith(separator)

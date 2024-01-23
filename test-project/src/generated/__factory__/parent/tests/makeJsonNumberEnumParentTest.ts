@@ -1,4 +1,4 @@
-import { JsonNumberEnumParentTest as __type___parent_tests_JsonNumberEnumParentTest } from "../../../__type__/parent/tests/JsonNumberEnumParentTest"
+import { JsonNumberEnumParentTest as __type___parent_tests_JsonNumberEnumParentTest } from "../../../__type__/parent/tests/JsonNumberEnumParentTest.js"
 
 export function makeJsonNumberEnumParentTest(props: __type___parent_tests_JsonNumberEnumParentTest): __type___parent_tests_JsonNumberEnumParentTest {
 	return props

@@ -1,4 +1,4 @@
-import { JsonStringEnum as __type___JsonStringEnum } from "../../JsonStringEnum"
+import { JsonStringEnum as __type___JsonStringEnum } from "../../JsonStringEnum.js"
 
 /**
  * This tests string enum value fields.

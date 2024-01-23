@@ -28,7 +28,7 @@ const myObject = makeMyObject({
 
 Contains TypeScript union types that can be very useful when you need to identify a type based on a property.
 
-*This folder is only generated if you have at least one interface that has an enum value property.*
+_This folder is only generated if you have at least one interface that has an enum value property._
 
 Let's say you have multiple city interfaces defined like this:
 
@@ -38,7 +38,7 @@ Let's say you have multiple city interfaces defined like this:
 {
   ".is": "interface",
   ".description": "The city of Budapest.",
-  
+
   "cityId": "./CityID.Budapest"
 }
 ```
@@ -109,8 +109,9 @@ jsoncodegen --generator typescript --config jsoncodegen-generator-typescript.con
 **jsoncodegen-generator-java-jackson.config.js**
 
 ```js
-module.exports = {
-  isMutable: false
+export default {
+	isMutable: false,
+	importFileExtension: '',
 }
 ```
 
@@ -118,10 +119,16 @@ module.exports = {
 
 If `true`, emitted interface properties, arrays and maps will not be `readonly`.
 
+### `importFileExtension?: string`
+
+Use a string like `'.js'` to append that file extension to each generated import declaration. If unspecified, the default is no file extensions.
+
 ## License
 
 MIT
 
 ## History
+
+1.1.0 require → import & importFileExtension support
 
 1.0.0 Initial version.
