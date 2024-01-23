@@ -1825,8 +1825,10 @@ jsoncodegen-types-for-generator@^1.0.1:
   resolved "https://registry.yarnpkg.com/jsoncodegen-types-for-generator/-/jsoncodegen-types-for-generator-1.0.1.tgz#c39d75f6ac8df03b13e3d760297870d183febbe7"
   integrity sha512-gRJX514VVx83irrCrB9fv7jr8m+eNO4BYvjDHUz9/EllUPn1m91zE2yraN5jy+fXnXpOyRaBxM2JTZOFXVJgQA==
 
-jsoncodegen@../jsoncodegen-cli:
-  version "1.1.0"
+jsoncodegen@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/jsoncodegen/-/jsoncodegen-1.1.1.tgz#a98e0bd4af8f76000154b7d4da624e0de0e24eed"
+  integrity sha512-qkhGivADsiSSWKluu8sT+51M9P59DDBdpXq0VjlruS6TnHETjhafDykpJXy4zoxdPu6eYAVVX0dV9EzIVzxExQ==
   dependencies:
     glob "^10.3.10"
     lodash-es "^4.17.21"
