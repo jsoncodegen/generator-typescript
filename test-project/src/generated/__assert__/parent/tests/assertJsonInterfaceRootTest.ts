@@ -1,5 +1,5 @@
+import type { JsonInterfaceRootTest as __type___parent_tests_JsonInterfaceRootTest } from "../../../__type__/parent/tests/JsonInterfaceRootTest.js"
 import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
-import { JsonInterfaceRootTest as __type___parent_tests_JsonInterfaceRootTest } from "../../../__type__/parent/tests/JsonInterfaceRootTest.js"
 import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
 import { assertJsonInterface as __assert___assertJsonInterface } from "../../assertJsonInterface.js"
 import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"

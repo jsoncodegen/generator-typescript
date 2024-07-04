@@ -1,5 +1,5 @@
+import type { JsonInterface as __type___JsonInterface } from "../__type__/JsonInterface.js"
 import { AssertionError as __assert_utility___AssertionError } from "../__assert_utility__/AssertionError.js"
-import { JsonInterface as __type___JsonInterface } from "../__type__/JsonInterface.js"
 
 export function assertJsonInterface( o: any, isNullable : true   , path?: string ): asserts o is __type___JsonInterface | null | undefined
 export function assertJsonInterface( o: any, isNullable?: boolean, path?: string ): asserts o is __type___JsonInterface

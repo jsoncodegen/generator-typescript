@@ -1,4 +1,4 @@
-import { JsonInterface as __type___parent_sibling_JsonInterface } from "../sibling/JsonInterface.js"
+import type { JsonInterface as __type___parent_sibling_JsonInterface } from "../sibling/JsonInterface.js"
 
 /**
  * This tests interface fields.

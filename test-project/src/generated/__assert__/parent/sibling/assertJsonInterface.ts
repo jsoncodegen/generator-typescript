@@ -1,5 +1,5 @@
+import type { JsonInterface as __type___parent_sibling_JsonInterface } from "../../../__type__/parent/sibling/JsonInterface.js"
 import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
-import { JsonInterface as __type___parent_sibling_JsonInterface } from "../../../__type__/parent/sibling/JsonInterface.js"
 
 export function assertJsonInterface( o: any, isNullable : true   , path?: string ): asserts o is __type___parent_sibling_JsonInterface | null | undefined
 export function assertJsonInterface( o: any, isNullable?: boolean, path?: string ): asserts o is __type___parent_sibling_JsonInterface

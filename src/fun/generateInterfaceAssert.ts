@@ -1,11 +1,11 @@
-import {
+import type {
 	IGeneratorResult,
 	IInterface,
 	IInterfaceField,
 	TFieldType,
 	TNamedType,
 } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
+import type { IConfig } from '../model/IConfig.js'
 import {
 	ASSERT_FOLDER_NAME,
 	ASSERT_UTILITY_FOLDER_NAME,
@@ -42,6 +42,7 @@ export async function generateInterfaceAssert(
 			path: joinWith(`/`)(...typeFolderRelativePath, ...directoryPath, name),
 			typeName: name,
 			alias: interfaceAlias,
+			isType: true,
 		}),
 	)
 	imports.add(
@@ -50,6 +51,7 @@ export async function generateInterfaceAssert(
 			path: joinWith(`/`)(...assertUtilityFolderRelativePath, `AssertionError`),
 			typeName: `AssertionError`,
 			alias: assertionErrorAlias,
+			isType: false,
 		}),
 	)
 	const assertions = fields.map((field) => wrap(field.fieldType, field))
@@ -136,6 +138,7 @@ export async function generateInterfaceAssert(
 				path: assertFunPath,
 				typeName: assertFunName,
 				alias: assertFunAlias,
+				isType: false,
 			}),
 		)
 		switch (fieldType.kind) {
@@ -153,6 +156,7 @@ export async function generateInterfaceAssert(
 						),
 						typeName: fieldType.name,
 						alias: fieldTypeName,
+						isType: false,
 					}),
 				)
 				break

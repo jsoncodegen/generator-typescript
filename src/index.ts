@@ -1,4 +1,4 @@
-import {
+import type {
 	IGenerator,
 	IGeneratorResult,
 	IInterface,
@@ -8,7 +8,7 @@ import { generateEnum } from './fun/generateEnum.js'
 import { generateExtras } from './fun/generateExtras.js'
 import { generateInterface } from './fun/generateInterface.js'
 import { generateUnionTypes } from './fun/generateUnionTypes.js'
-import { IConfig } from './model/IConfig.js'
+import type { IConfig } from './model/IConfig.js'
 
 export const generator: IGenerator = {
 	async generate(config: IConfig, namedTypesById): Promise<TGeneratorResult> {

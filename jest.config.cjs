@@ -1,6 +1,7 @@
-export default {
+module.exports = {
 	preset: 'ts-jest',
 	testEnvironment: 'node',
+	testPathIgnorePatterns: ['/node_modules/', '/test-project/'],
 	transform: {
 		'.ts': [
 			'ts-jest',

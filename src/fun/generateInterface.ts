@@ -1,4 +1,4 @@
-import {
+import type {
 	IArray,
 	IGeneratorResult,
 	IInterface,
@@ -6,8 +6,8 @@ import {
 	TFieldType,
 	TNamedType,
 } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
-import { IContext } from '../model/IContext.js'
+import type { IConfig } from '../model/IConfig.js'
+import type { IContext } from '../model/IContext.js'
 import { TYPE_FOLDER_NAME } from '../model/constants.js'
 import { templateOfImport } from '../template/templateOfImport.js'
 import { templateOfInterface } from '../template/templateOfInterface.js'
@@ -52,6 +52,7 @@ export async function generateInterface(
 							...wrappedType.relativeDirectoryPath,
 							wrappedType.name,
 						),
+						isType: wrappedType.kind === 'InterfaceReference',
 					}),
 				)
 			}

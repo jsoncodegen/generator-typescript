@@ -1,10 +1,10 @@
-import {
+import type {
 	IGeneratorResult,
 	INumberEnum,
 	INumberEnumValue,
 	IStringEnum,
 } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
+import type { IConfig } from '../model/IConfig.js'
 import {
 	ASSERT_FOLDER_NAME,
 	ASSERT_UTILITY_FOLDER_NAME,
@@ -40,6 +40,7 @@ export async function generateEnumAssert(
 			path: joinArrayWith(`/`)(assertFunPath),
 			typeName: assertFunName,
 			alias: assertFunAlias,
+			isType: false,
 		}),
 	)
 	const enumAlias = joinWith(`_`)(...directoryPath, name)
@@ -49,6 +50,7 @@ export async function generateEnumAssert(
 			path: joinWith(`/`)(...typeFolderRelativePath, ...directoryPath, name),
 			typeName: name,
 			alias: enumAlias,
+			isType: false,
 		}),
 	)
 	const valuesString = joinWith('\n')(

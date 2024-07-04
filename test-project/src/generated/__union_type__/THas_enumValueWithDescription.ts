@@ -1,13 +1,13 @@
-import { JsonNumberEnumValueChildTest as __type___parent_tests_JsonNumberEnumValueChildTest } from "../__type__/parent/tests/JsonNumberEnumValueChildTest.js"
-import { JsonNumberEnumValueLocalTest as __type___parent_tests_JsonNumberEnumValueLocalTest } from "../__type__/parent/tests/JsonNumberEnumValueLocalTest.js"
-import { JsonNumberEnumValueParentTest as __type___parent_tests_JsonNumberEnumValueParentTest } from "../__type__/parent/tests/JsonNumberEnumValueParentTest.js"
-import { JsonNumberEnumValueRootTest as __type___parent_tests_JsonNumberEnumValueRootTest } from "../__type__/parent/tests/JsonNumberEnumValueRootTest.js"
-import { JsonNumberEnumValueSiblingTest as __type___parent_tests_JsonNumberEnumValueSiblingTest } from "../__type__/parent/tests/JsonNumberEnumValueSiblingTest.js"
-import { JsonStringEnumValueChildTest as __type___parent_tests_JsonStringEnumValueChildTest } from "../__type__/parent/tests/JsonStringEnumValueChildTest.js"
-import { JsonStringEnumValueLocalTest as __type___parent_tests_JsonStringEnumValueLocalTest } from "../__type__/parent/tests/JsonStringEnumValueLocalTest.js"
-import { JsonStringEnumValueParentTest as __type___parent_tests_JsonStringEnumValueParentTest } from "../__type__/parent/tests/JsonStringEnumValueParentTest.js"
-import { JsonStringEnumValueRootTest as __type___parent_tests_JsonStringEnumValueRootTest } from "../__type__/parent/tests/JsonStringEnumValueRootTest.js"
-import { JsonStringEnumValueSiblingTest as __type___parent_tests_JsonStringEnumValueSiblingTest } from "../__type__/parent/tests/JsonStringEnumValueSiblingTest.js"
+import type { JsonNumberEnumValueChildTest as __type___parent_tests_JsonNumberEnumValueChildTest } from "../__type__/parent/tests/JsonNumberEnumValueChildTest.js"
+import type { JsonNumberEnumValueLocalTest as __type___parent_tests_JsonNumberEnumValueLocalTest } from "../__type__/parent/tests/JsonNumberEnumValueLocalTest.js"
+import type { JsonNumberEnumValueParentTest as __type___parent_tests_JsonNumberEnumValueParentTest } from "../__type__/parent/tests/JsonNumberEnumValueParentTest.js"
+import type { JsonNumberEnumValueRootTest as __type___parent_tests_JsonNumberEnumValueRootTest } from "../__type__/parent/tests/JsonNumberEnumValueRootTest.js"
+import type { JsonNumberEnumValueSiblingTest as __type___parent_tests_JsonNumberEnumValueSiblingTest } from "../__type__/parent/tests/JsonNumberEnumValueSiblingTest.js"
+import type { JsonStringEnumValueChildTest as __type___parent_tests_JsonStringEnumValueChildTest } from "../__type__/parent/tests/JsonStringEnumValueChildTest.js"
+import type { JsonStringEnumValueLocalTest as __type___parent_tests_JsonStringEnumValueLocalTest } from "../__type__/parent/tests/JsonStringEnumValueLocalTest.js"
+import type { JsonStringEnumValueParentTest as __type___parent_tests_JsonStringEnumValueParentTest } from "../__type__/parent/tests/JsonStringEnumValueParentTest.js"
+import type { JsonStringEnumValueRootTest as __type___parent_tests_JsonStringEnumValueRootTest } from "../__type__/parent/tests/JsonStringEnumValueRootTest.js"
+import type { JsonStringEnumValueSiblingTest as __type___parent_tests_JsonStringEnumValueSiblingTest } from "../__type__/parent/tests/JsonStringEnumValueSiblingTest.js"
 
 export type THas_enumValueWithDescription =
 	| __type___parent_tests_JsonNumberEnumValueChildTest

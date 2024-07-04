@@ -1,5 +1,8 @@
-import { IGeneratorResult, IInterface } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
+import type {
+	IGeneratorResult,
+	IInterface,
+} from 'jsoncodegen-types-for-generator'
+import type { IConfig } from '../model/IConfig.js'
 import { TYPE_FOLDER_NAME, UNION_TYPE_FOLDER_NAME } from '../model/constants.js'
 import { templateOfImport } from '../template/templateOfImport.js'
 import { templateOfUnionType } from '../template/templateOfUnionType.js'
@@ -34,6 +37,7 @@ export async function generateUnionTypes(
 					),
 					typeName: info.name,
 					alias: alias,
+					isType: true,
 				}),
 			)
 		}

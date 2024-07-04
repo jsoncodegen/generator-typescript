@@ -1,5 +1,5 @@
-import { TFieldType } from 'jsoncodegen-types-for-generator'
-import { IContext } from '../model/IContext.js'
+import type { TFieldType } from 'jsoncodegen-types-for-generator'
+import type { IContext } from '../model/IContext.js'
 import { join } from './join.js'
 import { joinWith } from './joinWith.js'
 import { namedFieldTypeLocalName } from './namedFieldTypeLocalName.js'

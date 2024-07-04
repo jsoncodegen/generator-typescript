@@ -1,8 +1,8 @@
-import { JsonInterface as __type___JsonInterface } from "../../JsonInterface.js"
-import { JsonInterface as __type___parent_JsonInterface } from "../JsonInterface.js"
-import { JsonInterface as __type___parent_sibling_JsonInterface } from "../sibling/JsonInterface.js"
-import { JsonInterface as __type___parent_tests_JsonInterface } from "./JsonInterface.js"
-import { JsonInterface as __type___parent_tests_child_JsonInterface } from "./child/JsonInterface.js"
+import type { JsonInterface as __type___JsonInterface } from "../../JsonInterface.js"
+import type { JsonInterface as __type___parent_JsonInterface } from "../JsonInterface.js"
+import type { JsonInterface as __type___parent_sibling_JsonInterface } from "../sibling/JsonInterface.js"
+import type { JsonInterface as __type___parent_tests_JsonInterface } from "./JsonInterface.js"
+import type { JsonInterface as __type___parent_tests_child_JsonInterface } from "./child/JsonInterface.js"
 
 /**
  * This tests interface fields.

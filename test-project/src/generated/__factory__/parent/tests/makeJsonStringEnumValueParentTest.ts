@@ -1,5 +1,5 @@
+import type { JsonStringEnumValueParentTest as __type___parent_tests_JsonStringEnumValueParentTest } from "../../../__type__/parent/tests/JsonStringEnumValueParentTest.js"
 import { JsonStringEnum as __type___parent_JsonStringEnum } from "../../../__type__/parent/JsonStringEnum.js"
-import { JsonStringEnumValueParentTest as __type___parent_tests_JsonStringEnumValueParentTest } from "../../../__type__/parent/tests/JsonStringEnumValueParentTest.js"
 
 export function makeJsonStringEnumValueParentTest(props: Omit<__type___parent_tests_JsonStringEnumValueParentTest, "enumValue" | "enumValueWithDescription">): __type___parent_tests_JsonStringEnumValueParentTest {
 	return {

@@ -1,4 +1,4 @@
-import { IConfig } from '../model/IConfig.js'
+import type { IConfig } from '../model/IConfig.js'
 
 export function templateOfAssertMap(config: IConfig) {
 	return `import { AssertionError } from './AssertionError${

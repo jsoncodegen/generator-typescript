@@ -1,10 +1,10 @@
-import {
+import type {
 	IGeneratorResult,
 	INumberEnum,
 	INumberEnumValue,
 	IStringEnum,
 } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
+import type { IConfig } from '../model/IConfig.js'
 import { TYPE_FOLDER_NAME } from '../model/constants.js'
 import { templateOfEnum } from '../template/templateOfEnum.js'
 import { generateEnumAssert } from './generateEnumAssert.js'

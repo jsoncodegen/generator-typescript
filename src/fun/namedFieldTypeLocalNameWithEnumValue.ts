@@ -1,4 +1,4 @@
-import {
+import type {
 	INumberEnumValueReference,
 	IStringEnumValueReference,
 } from 'jsoncodegen-types-for-generator'

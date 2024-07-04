@@ -2,7 +2,7 @@
 	"type": "module",
 	"name": "jsoncodegen-generator-typescript",
 	"description": "jsoncodegen JSON to TypeScript code generator.",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"author": {
 		"name": "András Parditka"
 	},
@@ -17,16 +17,16 @@
 		"url": "https://github.com/jsoncodegen/generator-typescript/issues"
 	},
 	"devDependencies": {
-		"@types/jest": "^29.5.11",
-		"@types/node": "^20.11.5",
+		"@types/jest": "^29.5.12",
+		"@types/node": "^20.14.9",
 		"@types/rimraf": "^3.0.2",
 		"jest": "^29.7.0",
 		"jsoncodegen": "^1.1.1",
 		"jsoncodegen-test-json": "^1.1.0",
 		"jsoncodegen-types-for-generator": "^1.0.1",
-		"rimraf": "^5.0.5",
-		"ts-jest": "^29.1.2",
-		"typescript": "^5.3.3"
+		"rimraf": "^5.0.7",
+		"ts-jest": "^29.1.5",
+		"typescript": "^5.5.3"
 	},
 	"scripts": {
 		"compile": "rimraf dist && tsc -p .",

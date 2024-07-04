@@ -1,6 +1,6 @@
+import type { JsonStringEnumValueLocalTest as __type___parent_tests_JsonStringEnumValueLocalTest } from "../../../__type__/parent/tests/JsonStringEnumValueLocalTest.js"
 import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
 import { JsonStringEnum as parent_tests_JsonStringEnum } from "../../../__type__/parent/tests/JsonStringEnum.js"
-import { JsonStringEnumValueLocalTest as __type___parent_tests_JsonStringEnumValueLocalTest } from "../../../__type__/parent/tests/JsonStringEnumValueLocalTest.js"
 import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
 import { assertExactValue as __assert_utility___assertExactValue } from "../../../__assert_utility__/assertExactValue.js"
 import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"

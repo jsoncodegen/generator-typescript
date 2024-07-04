@@ -1,10 +1,10 @@
-import {
+import type {
 	IGeneratorResult,
 	IInterface,
 	INumberEnumValueReference,
 	IStringEnumValueReference,
 } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
+import type { IConfig } from '../model/IConfig.js'
 import { FACTORY_FOLDER_NAME, TYPE_FOLDER_NAME } from '../model/constants.js'
 import { templateOfFactory } from '../template/templateOfFactory.js'
 import { templateOfImport } from '../template/templateOfImport.js'
@@ -36,6 +36,7 @@ export async function generateFactory(
 			),
 			typeName: interfaceName,
 			alias: interfaceAlias,
+			isType: true,
 		}),
 	)
 	const enumValueFields = interfaceFields.filter(
@@ -58,6 +59,7 @@ export async function generateFactory(
 					...fieldType.absoluteDirectoryPath,
 					fieldType.name,
 				),
+				isType: false,
 			}),
 		)
 	})

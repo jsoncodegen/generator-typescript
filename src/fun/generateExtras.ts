@@ -1,5 +1,5 @@
-import { IGeneratorResult } from 'jsoncodegen-types-for-generator'
-import { IConfig } from '../model/IConfig.js'
+import type { IGeneratorResult } from 'jsoncodegen-types-for-generator'
+import type { IConfig } from '../model/IConfig.js'
 import { ASSERT_UTILITY_FOLDER_NAME } from '../model/constants.js'
 import { templateOfAssertArray } from '../template/templateOfAssertArray.js'
 import { templateOfAssertBoolean } from '../template/templateOfAssertBoolean.js'

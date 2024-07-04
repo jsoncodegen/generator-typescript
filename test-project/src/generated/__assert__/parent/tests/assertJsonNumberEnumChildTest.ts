@@ -1,6 +1,6 @@
+import type { JsonNumberEnumChildTest as __type___parent_tests_JsonNumberEnumChildTest } from "../../../__type__/parent/tests/JsonNumberEnumChildTest.js"
 import { AssertionError as __assert_utility___AssertionError } from "../../../__assert_utility__/AssertionError.js"
 import { JsonNumberEnum as parent_tests_child_JsonNumberEnum } from "../../../__type__/parent/tests/child/JsonNumberEnum.js"
-import { JsonNumberEnumChildTest as __type___parent_tests_JsonNumberEnumChildTest } from "../../../__type__/parent/tests/JsonNumberEnumChildTest.js"
 import { assertArray as __assert_utility___assertArray } from "../../../__assert_utility__/assertArray.js"
 import { assertJsonNumberEnum as __assert___parent_tests_child_assertJsonNumberEnum } from "./child/assertJsonNumberEnum.js"
 import { assertMap as __assert_utility___assertMap } from "../../../__assert_utility__/assertMap.js"
